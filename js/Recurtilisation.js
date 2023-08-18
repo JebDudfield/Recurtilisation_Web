@@ -5,6 +5,7 @@ function setup(){
     randomSeed(37249273);
     stroke(255);
     frameRate(30);
+    textLeading(33);
     //windowTitle("Recurtilisation: Grow Right Ahead!");
     colorInitialise();
     initialise();
@@ -80,7 +81,8 @@ function initialise(){
         activeState = UI_STATE.HOWTO;
     }
 
-    howToText = new UIElem(new p5.Vector(60,80), new p5.Vector(360,300),
+    howToText = new UIElem(new p5.Vector(50,80), new p5.Vector(380,390),
+        " \n" +
         "Built in a week for Kiwijam 2023,\n" +
         "Recurtilisation* is a simple game about\n" +
         "growing a titan-plant with fertiliser\n" +
@@ -88,18 +90,20 @@ function initialise(){
         "Click the fruit to grow your plant!\n" +
         "Relax and watch the sky go by.\n" +
         "As your plant grows, its fruit will change.\n" +
+        "Grow all the way to the sun!\n" +
         "10,000 meters is your goal.\n" +
-        "I hope you enjoy!"
+        "Enjoy!" +
+        " \n"
         , UIMediumText);
 
-    howToFootnote = new UIElem(new p5.Vector(140,400), new p5.Vector(200,30), "(*Recursion + Fertilisation)", UISmallText);
+    howToFootnote = new UIElem(new p5.Vector(140,490), new p5.Vector(200,30), "(*Recursion + Fertilisation)", UISmallText);
 
     creditsButton = new UIElem(new p5.Vector(150,480),new p5.Vector(180,40), "Credits", UIBigText);
     creditsButton.execute = function(){
         activeState = UI_STATE.CREDITS;
     }
 
-    creditsText = new UIElem(new p5.Vector(60,80), new p5.Vector(360,300),
+    creditsText = new UIElem(new p5.Vector(50,80), new p5.Vector(380,300),
         " \n" +
         "Programming: \n" +
         "Jebadiah \"Jield\" Dudfield \n" +
