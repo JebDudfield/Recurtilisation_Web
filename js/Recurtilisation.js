@@ -164,7 +164,3 @@ function mousePressed(){
             break;
     }
 }
-
-function mouseWheel(){
-    game.p.speed += 10;
-}
