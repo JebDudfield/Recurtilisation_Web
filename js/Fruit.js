@@ -41,6 +41,9 @@ class Fruit{
         //drawHitbox();
     }
 
+    /**
+     * For gamefeel testing purposes.
+     */
     drawHitbox(){
         fill(0,0,255,100);
         stroke(0,0,255,100);

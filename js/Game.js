@@ -81,7 +81,7 @@ class Game{
         text(heightText,this.heightPos.x+UITextOffsetX,this.heightPos.y+UITextOffsetY);
     }
 
-    //Star positions as offsets from corners of an invisible grid of 2x20 squares.
+    //Star positions are defined as offsets from corners of an invisible grid of 2x20 squares.
     starPosList;
     starCols = 5;
     starRows = 20;

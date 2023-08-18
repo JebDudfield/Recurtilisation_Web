@@ -30,8 +30,8 @@ class Plant{
     //Progression constants
     stepHeight = 3500;
     //red, orange, yellow, blue, brown, purple
-    /** TODO: Check how to do arrays in p5.js**/
     colorStages = [color(255,30,30),color(255,150,0),color(255,255,30),color(30,30,255),color(150,75,20),color(150,20,150)];
+    //Triangle, Pentagon, Heptagon
     vertexStages = [3,5,7];
     totalStages = this.colorStages.length*this.vertexStages.length;
 
@@ -77,15 +77,9 @@ class Plant{
             vertex(rVertices[floor(2*i)],rVertices[floor(2*i+1)]);
         }
         endShape();
-        //this.getEdgeOffsetAtIndex(1);
 
         //Fruit drawing
-        this.fruitList.forEach((f)=>f.draw());
-        /*
-        for(Fruit f : fruitList){
-            f.draw();
-        }
-        */
+        this.fruitList.forEach((f)=>f.draw())
     }
 
     //conversion functions between abstract index and absolute line/Y value
@@ -109,7 +103,6 @@ class Plant{
     }
 
     //Returns the distance moved in pixels.
-    //TODO: Animate fruits
     update(){
         this.phase += this.speed;
         //Fruit creation
@@ -138,10 +131,6 @@ class Plant{
                 //And size!
             }
         }
-        //Carry out any deferred deletions
-        /*for(let f : this.deferredRemovalList){
-            fruitList.remove(f);
-        }*/
         this.deferredRemovalList.forEach((f) => {
             let index = this.fruitList.indexOf(f);
             if(index != -1){
@@ -170,12 +159,6 @@ class Plant{
     }
 
     handleClick(clickPos){
-        /*for(Fruit f : fruitList){
-            if(f.containsPos(clickPos)){
-                deferredRemovalList.add(f);
-                speed = fruitSpeedUp;
-            }
-        }*/
         this.fruitList.forEach((f)=>{
             if(f.containsPos(clickPos)){
                 this.deferredRemovalList.push(f);
