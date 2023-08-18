@@ -1,4 +1,3 @@
-/** JEB APPROVED AS REVISED PENDING TESTING **/
 //Manages the in-game elements
 class Game{
 

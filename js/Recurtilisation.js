@@ -1,4 +1,3 @@
-/** JEB APPROVED AS REVISED PENDING TESTING **/
 function setup(){
     can = createCanvas(W, H);
     can.id('GameCanvas');

@@ -1,4 +1,3 @@
-/** JEB APPROVED AS REVISED PENDING TESTING **/
 //UI element for menus
 //Intended to be used with anonymous class overriding of execute and draw.
 class UIElem{

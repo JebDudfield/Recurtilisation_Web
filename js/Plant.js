@@ -1,4 +1,3 @@
-/** JEB APPROVED AS REVISED PENDING TESTING **/
 class Plant{
     //Sinusoid Wave
     // y = O + Asin((2pi/T)x - P)

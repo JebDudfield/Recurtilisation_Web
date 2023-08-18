@@ -1,4 +1,3 @@
-/** JEB APPROVED AS REVISED PENDING TESTING **/
 class Fruit{
     //Fruit are distinguished via color and vertex count
     //Corner has a minimum of 3 vertices. Vertices are placed along an imaginary circle.
